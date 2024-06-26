@@ -24,16 +24,17 @@
             animation: rainbowBorder 8s infinite linear;
         }
 
-        @keyframes rainbowBorder {
-            0% { box-shadow: 0 0 20px rgba(255, 0, 0, .9); }
-            14.28% { box-shadow: 0 0 20px rgba(255, 127, 0, .9); }
-            28.57% { box-shadow: 0 0 20px rgba(255, 255, 0, .9); }
-            42.85% { box-shadow: 0 0 20px rgba(0, 255, 0, .9); }
-            57.14% { box-shadow: 0 0 20px rgba(0, 0, 255, .9); }
-            71.42% { box-shadow: 0 0 20px rgba(75, 0, 130, .9); }
-            85.71% { box-shadow: 0 0 20px rgba(148, 0, 211, .9); }
-            100% { box-shadow: 0 0 20px rgba(255, 0, 0, .5); }
-        }
+@keyframes rainbowBorder {
+    0% { box-shadow: 0 0 20px rgba(255, 0, 0, 1), 0 0 40px rgba(255, 0, 0, 1), 0 0 60px rgba(255, 0, 0, 1); }
+    14.28% { box-shadow: 0 0 20px rgba(255, 127, 0, 1), 0 0 40px rgba(255, 127, 0, 1), 0 0 60px rgba(255, 127, 0, 1); }
+    28.57% { box-shadow: 0 0 20px rgba(255, 255, 0, 1), 0 0 40px rgba(255, 255, 0, 1), 0 0 60px rgba(255, 255, 0, 1); }
+    42.85% { box-shadow: 0 0 20px rgba(0, 255, 0, 1), 0 0 40px rgba(0, 255, 0, 1), 0 0 60px rgba(0, 255, 0, 1); }
+    57.14% { box-shadow: 0 0 20px rgba(0, 0, 255, 1), 0 0 40px rgba(0, 0, 255, 1), 0 0 60px rgba(0, 0, 255, 1); }
+    71.42% { box-shadow: 0 0 20px rgba(75, 0, 130, 1), 0 0 40px rgba(75, 0, 130, 1), 0 0 60px rgba(75, 0, 130, 1); }
+    85.71% { box-shadow: 0 0 20px rgba(148, 0, 211, 1), 0 0 40px rgba(148, 0, 211, 1), 0 0 60px rgba(148, 0, 211, 1); }
+    100% { box-shadow: 0 0 20px rgba(255, 0, 0, 1), 0 0 40px rgba(255, 0, 0, 1), 0 0 60px rgba(255, 0, 0, 1); }
+}
+
 
         @keyframes gradientBackground {
             0% { background-position: 0% 50%; }
@@ -65,7 +66,7 @@
             transform: scale(1.05);
         }
 
-        .show-code-button {
+        .show-code-button, .contact-button {
             cursor: pointer;
             color: #fff;
             background-color: #007bff;
@@ -77,7 +78,7 @@
             text-decoration: none;
         }
 
-        .show-code-button:hover {
+        .show-code-button:hover, .contact-button:hover {
             background-color: #0056b3;
             transform: translateY(-2px);
         }
@@ -108,6 +109,8 @@
         <h2>Coding Portfolio</h2>
         <h3>C# | Python | Java</h3>
 
+        <div class="contact-button" onclick="location.href='https://whosvon.github.io/whosvon/contact'">Contact Me Here!</div>
+
         <div class="project-item">
             <h4>Simple Aim Trainer | C#</h4>
             <div class="show-code-button" onclick="toggleCode(this)">Click to View Code</div>
@@ -131,12 +134,12 @@ import aiohttp
 import os
 import sys
 
-TOKEN = '0'  # Replace with your bot token
+TOKEN = '0'  // Replace with your bot token
 IMAGE_URL = 'https://miro.medium.com/v2/resize:fit:1400/1*g9ee7RUD831R9n6Km5Jizg.gif'
-VOICE_PANEL_CHANNEL_ID = 1255275729919283251  # Replace with your channel ID
-VERIFY_PANEL_CHANNEL_ID = 1206091007591063561  # Replace with your verify panel channel ID
-VERIFY_ROLE_ID = 1255282250778546216  # Replace with your role ID
-RULES_CHANNEL_ID = 123456789012345678  # Replace with your rules channel ID
+VOICE_PANEL_CHANNEL_ID = 1255275729919283251  // Replace with your channel ID
+VERIFY_PANEL_CHANNEL_ID = 1206091007591063561  // Replace with your verify panel channel ID
+VERIFY_ROLE_ID = 1255282250778546216  // Replace with your role ID
+RULES_CHANNEL_ID = 123456789012345678  // Replace with your rules channel ID
 
 intents = discord.Intents.default()
 intents.guilds = True
@@ -180,7 +183,7 @@ async def on_ready():
     // Fetch and set the bot's profile picture
     async with aiohttp.ClientSession() as session:
         async with session.get(IMAGE_URL) as response:
-            if response.status == 200:
+            if (response.status == 200):
                 image_bytes = await response.read()
                 await bot.user.edit(avatar=image_bytes)
                 print('Bot profile picture updated!')
@@ -198,7 +201,7 @@ async def on_ready():
 
 async def purge_and_send_panel(channel_id, send_panel_function):
     channel = bot.get_channel(channel_id)
-    if channel:
+    if (channel):
         try:
             await channel.purge()
             await send_panel_function(channel)
