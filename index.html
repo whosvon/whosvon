@@ -3,27 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vape Store</title>
+    <title>Home | VapeStore</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js" defer></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <h1 class="logo">VapeStore</h1>
-            <nav class="nav">
-                <ul class="nav-list">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#products">Products</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#login" class="btn-login">Login</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <?php include 'header.html'; ?>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
@@ -31,52 +16,13 @@
             <h2>Welcome to VapeStore</h2>
             <p>Your premium source for modern vaping products.</p>
             <div class="cta-buttons">
-                <a href="#products" class="btn-primary">Shop Now</a>
-                <a href="#about" class="btn-secondary">Learn More</a>
+                <a href="products.html" class="btn-primary">Shop Now</a>
+                <a href="about.html" class="btn-secondary">Learn More</a>
             </div>
-        </div>
-    </section>
-
-    <!-- Product Showcase -->
-    <section id="products" class="products">
-        <div class="container">
-            <h2>Our Products</h2>
-            <div class="product-grid">
-                <div class="product-card">
-                    <img src="product1.jpg" alt="Product 1">
-                    <h3>Product Name</h3>
-                    <p>$49.99</p>
-                    <button class="btn-add-to-cart">Add to Cart</button>
-                </div>
-                <div class="product-card">
-                    <img src="product2.jpg" alt="Product 2">
-                    <h3>Product Name</h3>
-                    <p>$59.99</p>
-                    <button class="btn-add-to-cart">Add to Cart</button>
-                </div>
-                <!-- Add more product cards as needed -->
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2>About Us</h2>
-            <p>We are dedicated to providing high-quality vaping products with exceptional customer service.</p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 VapeStore. All rights reserved.</p>
-            <ul class="social-links">
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">Instagram</a></li>
-                <li><a href="#">Twitter</a></li>
-            </ul>
-        </div>
-    </footer>
+    <?php include 'footer.html'; ?>
 </body>
 </html>
