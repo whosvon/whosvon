@@ -10,13 +10,30 @@ body {
     line-height: 1.6;
     color: #333;
     background: #f4f4f9;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-/* Container */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+/* Dark Mode Styles */
+body.dark-mode {
+    background: #121212;
+    color: #f4f4f9;
+}
+
+body.dark-mode .header {
+    background: linear-gradient(to right, #2d99f3, #ff4b5c);
+}
+
+body.dark-mode .hero {
+    background: linear-gradient(135deg, #ff4b5c, #2d99f3);
+}
+
+body.dark-mode .nav-list a {
+    color: white;
+}
+
+body.dark-mode .btn-login {
+    background: #ffcf33;
+    color: #333;
 }
 
 /* Header */
@@ -28,48 +45,6 @@ body {
     top: 0;
     z-index: 1000;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: 600;
-}
-
-.nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav-list {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-}
-
-.nav-list a {
-    text-decoration: none;
-    color: white;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.nav-list a:hover {
-    color: #ffcf33;
-}
-
-.btn-login {
-    padding: 0.5rem 1rem;
-    background: white;
-    color: #ff4b5c;
-    border-radius: 20px;
-    font-weight: bold;
-    transition: 0.3s ease;
-}
-
-.btn-login:hover {
-    background: #ffcf33;
-    color: #fff;
 }
 
 /* Hero Section */
@@ -121,83 +96,6 @@ body {
 .btn-secondary:hover {
     background: #fff;
     color: #ff4b5c;
-}
-
-/* Products Section */
-.products {
-    padding: 2rem 0;
-    text-align: center;
-}
-
-.products h2 {
-    margin-bottom: 1rem;
-    color: #ff4b5c;
-}
-
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.product-card {
-    background: white;
-    border-radius: 10px;
-    padding: 1rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.product-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.product-card img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.product-card h3 {
-    margin: 1rem 0 0.5rem;
-    font-size: 1.2rem;
-}
-
-.product-card p {
-    color: #2d99f3;
-    font-size: 1rem;
-    margin-bottom: 1rem;
-}
-
-.btn-add-to-cart {
-    background: #ff4b5c;
-    color: white;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.btn-add-to-cart:hover {
-    background: #2d99f3;
-}
-
-/* About Section */
-.about {
-    padding: 2rem 0;
-    background: #2d99f3;
-    color: white;
-    text-align: center;
-}
-
-.about h2 {
-    margin-bottom: 1rem;
-}
-
-.about p {
-    font-size: 1.1rem;
 }
 
 /* Footer */
