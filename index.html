@@ -2,288 +2,81 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Whosvon/AJ - Coding Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: url(https://www.icegif.com/wp-content/uploads/2024/02/icegif-267.gif) center/cover no-repeat fixed;
-            overflow-x: hidden;
-            animation: gradientBackground 10s infinite alternate;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, .9);
-            border-radius: 5px;
-            box-shadow: 0 0 20px rgba(255, 255, 255, .5);
-            animation: rainbowBorder 8s infinite linear;
-        }
-
-@keyframes rainbowBorder {
-    0% { box-shadow: 0 0 20px rgba(255, 0, 0, 1), 0 0 40px rgba(255, 0, 0, 1), 0 0 60px rgba(255, 0, 0, 1); }
-    14.28% { box-shadow: 0 0 20px rgba(255, 127, 0, 1), 0 0 40px rgba(255, 127, 0, 1), 0 0 60px rgba(255, 127, 0, 1); }
-    28.57% { box-shadow: 0 0 20px rgba(255, 255, 0, 1), 0 0 40px rgba(255, 255, 0, 1), 0 0 60px rgba(255, 255, 0, 1); }
-    42.85% { box-shadow: 0 0 20px rgba(0, 255, 0, 1), 0 0 40px rgba(0, 255, 0, 1), 0 0 60px rgba(0, 255, 0, 1); }
-    57.14% { box-shadow: 0 0 20px rgba(0, 0, 255, 1), 0 0 40px rgba(0, 0, 255, 1), 0 0 60px rgba(0, 0, 255, 1); }
-    71.42% { box-shadow: 0 0 20px rgba(75, 0, 130, 1), 0 0 40px rgba(75, 0, 130, 1), 0 0 60px rgba(75, 0, 130, 1); }
-    85.71% { box-shadow: 0 0 20px rgba(148, 0, 211, 1), 0 0 40px rgba(148, 0, 211, 1), 0 0 60px rgba(148, 0, 211, 1); }
-    100% { box-shadow: 0 0 20px rgba(255, 0, 0, 1), 0 0 40px rgba(255, 0, 0, 1), 0 0 60px rgba(255, 0, 0, 1); }
-}
-
-
-        @keyframes gradientBackground {
-            0% { background-position: 0% 50%; }
-            100% { background-position: 100% 50%; }
-        }
-
-        h1, h2, h3 {
-            text-align: center;
-            color: #333;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        h3 {
-            margin-top: 30px;
-            color: #555;
-        }
-
-        .project-item {
-            margin-bottom: 20px;
-            background-color: #f9f9f9;
-            padding: 15px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, .1);
-            transition: transform .3s ease-in-out;
-        }
-
-        .project-item:hover {
-            transform: scale(1.05);
-        }
-
-        .show-code-button, .contact-button {
-            cursor: pointer;
-            color: #fff;
-            background-color: #007bff;
-            padding: 10px 20px;
-            border-radius: 5px;
-            display: inline-block;
-            margin-top: 10px;
-            transition: transform .2s, background-color .3s ease-in-out;
-            text-decoration: none;
-        }
-
-        .show-code-button:hover, .contact-button:hover {
-            background-color: #0056b3;
-            transform: translateY(-2px);
-        }
-
-        .code-container {
-            display: none;
-            margin-top: 10px;
-            background-color: #f0f0f0;
-            padding: 10px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, .1);
-        }
-
-        .video-container {
-            margin-top: 20px;
-        }
-
-        pre {
-            white-space: pre-wrap;
-            word-wrap: break-word;
-            font-size: 14px;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vape Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <h1>Whosvon | AJ</h1>
-        <h2>Coding Portfolio</h2>
-        <h3>C# | Python | Java</h3>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">VapeStore</h1>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#login" class="btn-login">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-        <div class="contact-button" onclick="location.href='https://whosvon.github.io/whosvon/contact'">Contact Me!</div>
-        
-        <div class="contact-button" onclick="location.href='https://whosvon.github.i/whosvon/java'">Java </div>
-        <div class="contact-button" onclick="location.href='https://whosvon.github.io/whosvon/python'">Python </div>
-        <div class="contact-button" onclick="location.href='https://whosvon.github.io/whosvon/csharp'">C# </div>
-
-        <div class="project-item">
-            <h4>Simple Aim Trainer | C#</h4>
-            <div class="show-code-button" onclick="toggleCode(this)">Click to View Code</div>
-            <div class="code-container">
-                <pre><code>// 1.0 Aim Trainer</code></pre>
-                <pre><code>// Final Project 2024-06-01 Gr 12 Computer Sci</code></pre>
-                <div class="video-container">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/E3SDs6w43kQ" frameborder="0" allowfullscreen></iframe>
-                </div>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Welcome to VapeStore</h2>
+            <p>Your premium source for modern vaping products.</p>
+            <div class="cta-buttons">
+                <a href="#products" class="btn-primary">Shop Now</a>
+                <a href="#about" class="btn-secondary">Learn More</a>
             </div>
         </div>
+    </section>
 
-        <div class="project-item">
-            <h4>Simple Discord Bot | Python</h4>
-            <div class="show-code-button" onclick="toggleCode(this)">Click to View Code</div>
-            <div class="code-container">
-                <pre><code>import discord
-from discord.ext import commands
-from discord.ui import Button, View
-import aiohttp
-import os
-import sys
-
-TOKEN = '0'  // Replace with your bot token
-IMAGE_URL = 'https://miro.medium.com/v2/resize:fit:1400/1*g9ee7RUD831R9n6Km5Jizg.gif'
-VOICE_PANEL_CHANNEL_ID = 1255275729919283251  // Replace with your channel ID
-VERIFY_PANEL_CHANNEL_ID = 1206091007591063561  // Replace with your verify panel channel ID
-VERIFY_ROLE_ID = 1255282250778546216  // Replace with your role ID
-RULES_CHANNEL_ID = 123456789012345678  // Replace with your rules channel ID
-
-intents = discord.Intents.default()
-intents.guilds = True
-intents.voice_states = True
-intents.messages = True
-intents.message_content = True  // Enable message content intent
-intents.members = True  // Enable member intent
-
-bot = commands.Bot(command_prefix='!', intents=intents)
-
-class VoiceChannelView(View):
-    def __init__(self):
-        super().__init__(timeout=None)
-        self.channel_name = None
-
-    @discord.ui.button(label='Create Here', style=discord.ButtonStyle.green)
-    async def create_button(self, interaction: discord.Interaction, button: Button):
-        await interaction.response.send_message("Please type the name of the voice channel:", ephemeral=True)
-        msg = await bot.wait_for('message', check=lambda m: m.author == interaction.user and m.channel == interaction.channel)
-        self.channel_name = msg.content
-        await msg.delete()  // Delete the user's message after capturing the channel name
-        category = interaction.channel.category
-        voice_channel = await interaction.guild.create_voice_channel(name=self.channel_name, category=category)
-        await interaction.followup.send(f"Voice channel '{self.channel_name}' created!", ephemeral=True)
-
-@bot.event
-async def on_voice_state_update(member, before, after):
-    if before.channel and len(before.channel.members) == 0:
-        try:
-            await before.channel.delete()
-        except discord.errors.NotFound:
-            print(f"Channel {before.channel.id} not found for deletion.")
-        except Exception as e:
-            print(f"Error deleting channel {before.channel.id}: {e}")
-
-@bot.event
-async def on_ready():
-    await bot.tree.sync()
-    print(f'Logged in as {bot.user}!')
-
-    // Fetch and set the bot's profile picture
-    async with aiohttp.ClientSession() as session:
-        async with session.get(IMAGE_URL) as response:
-            if (response.status == 200):
-                image_bytes = await response.read()
-                await bot.user.edit(avatar=image_bytes)
-                print('Bot profile picture updated!')
-            else:
-                print('Failed to fetch image.')
-
-    // Purge the specified voice panel channel and resend the voice panel
-    await purge_and_send_panel(VOICE_PANEL_CHANNEL_ID, send_voice_panel)
-
-    // Purge the specified verify panel channel and resend the verify panel
-    await purge_and_send_panel(VERIFY_PANEL_CHANNEL_ID, send_verify_panel)
-
-    // Update bot's status to show total members
-    await update_status_with_total_members()
-
-async def purge_and_send_panel(channel_id, send_panel_function):
-    channel = bot.get_channel(channel_id)
-    if (channel):
-        try:
-            await channel.purge()
-            await send_panel_function(channel)
-            print(f'Purged and resent panel in channel {channel_id}.')
-        except Exception as e:
-            print(f'Error purging and sending panel in channel {channel_id}: {e}')
-    else:
-        print(f'Channel {channel_id} not found.')
-
-async def send_voice_panel(channel):
-    embed = discord.Embed(title="Create A Voice Channel!", description="Click the button below to create a voice channel", color=discord.Color.green())
-    view = VoiceChannelView()
-    await channel.send(embed=embed, view=view)
-
-async def send_verify_panel(channel):
-    embed = discord.Embed(
-        title="Verification",
-        description=(
-            "Hey everyone! Welcome to CypHer's Basement, your new hangout
-spot for all things gaming, tech, and beyond. "
-            "Whether you're here to chill, game, or dive into discussions, we're thrilled to have you join our community. "
-            f"Please visit <#{1206091007880462367}> after verification."
-        ),
-        color=discord.Color.green()
-    )
-    view = VerifyRoleView()
-    await channel.send(embed=embed, view=view)
-
-async def update_status_with_total_members():
-    // Calculate total members in all guilds
-    total_members = sum([guild.member_count for guild in bot.guilds])
-    game = discord.Game(name=f"Total Members: {total_members}")
-    await bot.change_presence(activity=game)
-
-    print(f'Bot status updated with total members: {total_members}')
-
-@bot.command(name='reload')
-@commands.is_owner()
-async def reload(ctx):
-    await ctx.send("Reloading bot...")
-    os.execv(sys.executable, ['python'] + sys.argv)
-
-@bot.event
-async def on_command_error(ctx, error):
-    if isinstance(error, commands.errors.CommandInvokeError):
-        await ctx.send(f"Error: {error.original}")
-
-@bot.event
-async def on_app_command_error(interaction, error):
-    if isinstance(error, app_commands.errors.CommandInvokeError):
-        await interaction.response.send_message(f"Error: {error.original}", ephemeral=True)
-
-bot.run(TOKEN)</code></pre>
-                <div class="video-container">
-                    <iframe width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+    <!-- Product Showcase -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2>Our Products</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="product1.jpg" alt="Product 1">
+                    <h3>Product Name</h3>
+                    <p>$49.99</p>
+                    <button class="btn-add-to-cart">Add to Cart</button>
                 </div>
+                <div class="product-card">
+                    <img src="product2.jpg" alt="Product 2">
+                    <h3>Product Name</h3>
+                    <p>$59.99</p>
+                    <button class="btn-add-to-cart">Add to Cart</button>
+                </div>
+                <!-- Add more product cards as needed -->
             </div>
         </div>
-        
-        <div class="project-item">
-            <h4>About Me | C#</h4>
-            <div class="show-code-button" onclick="toggleCode(this)">Click to View Code</div>
-            <div class="code-container">
-                <pre><code>// </code></pre>
-                <div class="video-container">
-                    <iframe width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
-                </div>
-            </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>We are dedicated to providing high-quality vaping products with exceptional customer service.</p>
         </div>
+    </section>
 
-    </div>
-
-    <script>
-        function toggleCode(button) {
-            const codeContainer = button.nextElementSibling;
-            codeContainer.style.display = (codeContainer.style.display === 'none' || codeContainer.style.display === '') ? 'block' : 'none';
-        }
-    </script>
-
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 VapeStore. All rights reserved.</p>
+            <ul class="social-links">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Twitter</a></li>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>
