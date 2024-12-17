@@ -1,171 +1,144 @@
-/* Basic Styling */
-body {
-    font-family: 'Poppins', sans-serif;
+/* General Styles */
+* {
     margin: 0;
     padding: 0;
-    background-color: #fff;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #f7f7f7;
     color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* Header */
 .header {
-    background: linear-gradient(135deg, #ff4b2b, #ff416c);
-    padding: 20px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
 }
 
 .logo {
-    font-size: 24px;
+    font-size: 2rem;
+    font-weight: 600;
     color: #fff;
-    text-align: center;
 }
 
 .nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: right;
 }
 
 .nav-list {
-    list-style-type: none;
-    display: flex;
-    padding: 0;
+    list-style: none;
 }
 
 .nav-list li {
-    margin: 0 15px;
+    display: inline-block;
+    margin-left: 20px;
 }
 
 .nav-list a {
     color: #fff;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 500;
 }
 
-.nav-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 30px;
-    cursor: pointer;
+.nav-list .btn-login {
+    background-color: #f0ad4e;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 600;
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #ff4b2b, #ff416c);
+    background: linear-gradient(to right, #f06, #ff9a8b);
     color: #fff;
-    padding: 80px 0;
+    padding: 60px 0;
     text-align: center;
+}
+
+.hero-heading {
+    font-size: 3rem;
+    margin-bottom: 20px;
 }
 
 .cta-buttons {
     margin-top: 20px;
 }
 
-.cta-buttons a {
-    padding: 10px 20px;
-    margin: 5px;
+.cta-buttons .btn {
     text-decoration: none;
-    font-weight: 600;
-}
-
-.btn-primary {
-    background-color: #ff416c;
-    color: #fff;
+    padding: 15px 30px;
     border-radius: 30px;
+    font-size: 1.1rem;
+    margin: 10px;
+    transition: background 0.3s;
 }
 
-.btn-secondary {
-    background-color: transparent;
+.cta-buttons .btn-primary {
+    background-color: #ffb900;
     color: #fff;
-    border: 2px solid #fff;
-    border-radius: 30px;
 }
 
-/* Product Showcase */
-.products {
-    padding: 50px 0;
-    background-color: #f4f4f4;
-    text-align: center;
+.cta-buttons .btn-primary:hover {
+    background-color: #ff9900;
 }
 
-.product-grid {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-}
-
-.product-card {
+.cta-buttons .btn-secondary {
     background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    color: #333;
+    border: 2px solid #ff9a8b;
+}
+
+.cta-buttons .btn-secondary:hover {
+    background-color: #ff9a8b;
+    color: #fff;
+}
+
+/* About Section */
+.about {
+    background-color: #fff;
+    padding: 60px 0;
     text-align: center;
 }
 
-.product-card img {
-    max-width: 100%;
-    border-radius: 5px;
-}
-
-.product-card button {
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #ff416c;
-    color: #fff;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
 /* Footer */
 .footer {
     background-color: #333;
     color: #fff;
-    padding: 20px 0;
+    padding: 30px 0;
     text-align: center;
 }
 
 .social-links {
     list-style: none;
-    padding: 0;
+    padding-top: 10px;
 }
 
 .social-links li {
     display: inline-block;
-    margin: 0 10px;
+    margin: 0 15px;
 }
 
 .social-links a {
     color: #fff;
     text-decoration: none;
+    font-weight: 500;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .nav-list {
-        display: none;
-        flex-direction: column;
-        margin-top: 10px;
-    }
-
-    .nav-toggle {
-        display: block;
-    }
-
-    .nav.active .nav-list {
-        display: flex;
-    }
+.social-links a:hover {
+    text-decoration: underline;
 }
